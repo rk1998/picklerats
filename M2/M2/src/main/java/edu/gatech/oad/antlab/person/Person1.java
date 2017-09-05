@@ -31,14 +31,17 @@ public class Person1 {
      */
     private String calc(String input) {
         String result = "";
-        for (int i = 0; i < input.length() - 2; i++) {
+        if(input.length() < 2) {
+            return input;
+        }
+        for (int i = 0; i < 2; i++) {
             result += input.charAt(i);
         }
         String result2 = "";
-        for (int i = input.length() - 2; i < input.length(); i++) {
-            end += input.charAt(i);
+        for (int i = 2; i < input.length(); i++) {
+            result2 += input.charAt(i);
         }
-        return end + first;
+        return result2 + result;
     }
 
     /**
