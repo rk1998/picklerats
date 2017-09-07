@@ -32,9 +32,12 @@ public class Person4 {
     private String calc(String input) {
       //Person 4 put your implementation here
       String out = "";
-      for (char c : input.toCharArray()) {
-          out += Character.toString((char) (((c - ' ' + 1) % 95) + 'a'));
+      for(int i = 0; i < input.length(); i++) {
+        out += (char) (input.charAt(i) + 1);
       }
+      // for (char c : input.toCharArray()) {
+      //     out += Character.toString((char) (((c - ' ' + 1) % 95) + 'a'));
+      // }
       return out;
     }
 

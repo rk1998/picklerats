@@ -5,6 +5,17 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 task task1 << {
+    jar {
+        manifest {
+             attributes  'Implementation-Title' : 'AntLab' ,
+                         'Implementation-Version' : version,
+                          'Main-Class' : mainClassName,
+                          'Class-Path' : '../../lib/resources.jar'
+
+
+        }
+        archiveName = 'antlab.jar'
+    }
 
 }
 
